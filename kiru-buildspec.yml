@@ -5,7 +5,7 @@ phases:
      - docker login -u $dockerhub_username -p $dockerhub_password
  build:
    commands:
-     - docker pull composer:2.1.3
+     - docker pull composer:1.9.3
      - composer install --no-progress --no-suggest
 
  post_build:
