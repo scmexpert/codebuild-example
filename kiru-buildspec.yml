@@ -2,7 +2,7 @@ version: 0.2
 phases:
  install:
    commands:
-    - echo "Build starting"
+     - docker login -u $dockerhub_username -p $dockerhub_password
  build:
    commands:
      - docker pull composer:2.1.3
