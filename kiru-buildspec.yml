@@ -6,6 +6,8 @@ phases:
  build:
    commands:
      - composer install --no-progress --no-suggest
+     - pwd
+     - ls -ltr
 
  post_build:
    commands:
