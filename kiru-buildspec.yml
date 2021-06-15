@@ -2,10 +2,9 @@ version: 0.2
 phases:
  install:
    commands:
-     - docker login -u $dockerhub_username -p $dockerhub_password
+     - echo "Build Starting..."
  build:
    commands:
-     - docker pull composer:1.9.3
      - composer install --no-progress --no-suggest
 
  post_build:
@@ -15,4 +14,4 @@ phases:
      # If you don't need it delete it
      # - /usr/bin/mysql  -u root -e "GRANT ALL ON *.* TO 'test'@'localhost' IDENTIFIED BY '' WITH GRANT OPTION"
      # - mysqladmin -u test create test
-     - ./vendor/bin/phpunit
+     # ./vendor/bin/phpunit
