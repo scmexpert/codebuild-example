@@ -5,6 +5,8 @@ phases:
      - echo "Build Starting..."
  build:
    commands:
+     - env
+     - phpenv global $PHP_73_VERSION
      - composer install --no-progress --no-suggest
      - pwd
      - ls -ltr
